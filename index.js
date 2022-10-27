@@ -12,6 +12,10 @@ conectarDB();
 //Crear un puerto de la app.El que tenga disponble o 4000. Se usa el 4000 para que no choque con el cliente
 const PORT = process.env.PORT || 4000;
 
+//Importar rutas
+//Se agrega /api/ porque de esta forma en un futuro si haces el proyecto web también funciona
+app.use("/api/usuarios", require("./routes/usuarios"));
+
 //SOLO PARA PROBAR QUE FUNCIONA
 //Definir página principal
 //Se pone get porque es cuando un usuario visita una url
