@@ -9,6 +9,9 @@ const app = express();
 //Conectar a la base de datos con la función que importamos
 conectarDB();
 
+//Habilitar express.json (antes se usaba bodyParser)
+app.use(express.json({ extended: true }));
+
 //Crear un puerto de la app.El que tenga disponble o 4000. Se usa el 4000 para que no choque con el cliente
 const PORT = process.env.PORT || 4000;
 
