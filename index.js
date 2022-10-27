@@ -1,10 +1,12 @@
 const express = require("express");
-const conectarDB = requiere("./config/db");
+
+//Importamos la función de db.js
+const conectarDB = require("./config/db");
 
 //Crear el servidor
 const app = express();
 
-//Conectar a la base de datos
+//Conectar a la base de datos con la función que importamos
 conectarDB();
 
 //Crear un puerto de la app.El que tenga disponble o 4000. Se usa el 4000 para que no choque con el cliente
